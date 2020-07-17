@@ -84,37 +84,37 @@ class Feedback:
         nb = Notebook(mymaster, name='nb') # create Notebook in "master"
         nb.pack(fill=BOTH, padx=2, pady=3) # fill "master" but pad sides
         #content frame
-        self.frame_content = Frame(nb,name="frame_content", bg="white")
+        self.frame_content = Frame(nb,name="frame_content", bg="lightsteelblue")
         self.frame_content.pack(fill=BOTH, side=TOP, expand=True)
         nb.add(self.frame_content, text="Filter-1") # add tab to Notebook
     
         # repeat for each tab
-        self.frame_content7 = Frame(nb, name='frame_content7', bg="white")
+        self.frame_content7 = Frame(nb, name='frame_content7', bg="lightsteelblue")
         nb.add(self.frame_content7, text="Detect Devices")
-        self.frame_content5 = Frame(nb, name='frame_content5', bg="white")
+        self.frame_content5 = Frame(nb, name='frame_content5', bg="lightsteelblue")
         nb.add(self.frame_content5, text="output")
         
         #End
         
 	#frame content 7
-	Label(self.frame_content7, text = 'Aigraph-ng',font=self.headerfont, bg="white", padx=10, pady=10).grid(row = 0, column = 0)
+	Label(self.frame_content7, text = 'Aigraph-ng',font=self.headerfont, bg="midnightblue", padx=10, pady=10).grid(row = 0, column = 0)
         btndetect=Button(self.frame_content7, text = 'Detect', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 1, column = 0, padx = 5, pady = 5)
 		
 	btndbrowse=Button(self.frame_content7, text = 'Attach File', command =self.browse_file, height=2, width=15, font=self.customFont).grid(row = 3, column = 0, padx = 5, pady = 5)	
-	self.lilnew1=Listbox(self.frame_content7,bg="black", fg="white", font=self.myfont, selectmode=SINGLE, width=30, height=15)
+	self.lilnew1=Listbox(self.frame_content7,bg="black", fg="midnightblue", font=self.myfont, selectmode=SINGLE, width=30, height=15)
         self.lilnew1.grid(row = 1, column = 1, rowspan=3)
 	#End
 	
-        Label(self.frame_content, text = 'Airtun-ng',font=self.headerfont, bg="white", padx=10, pady=10).grid(row = 0, column = 0)
-        Label(self.frame_content, text = 'Options :',font=self.myfontnew, bg="white").grid(row = 1, column = 1)
+        Label(self.frame_content, text = 'Airtun-ng',font=self.headerfont, bg="midnightblue", padx=10, pady=10).grid(row = 0, column = 0)
+        Label(self.frame_content, text = 'Options :',font=self.myfontnew, bg="midnightblue").grid(row = 1, column = 1)
         #Button(self.frame_content, text = 'ivs', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 2, column = 0, padx = 5, pady = 5)
         #Button(self.frame_content, text = 'gpsd', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 2, column = 1, padx = 5, pady = 5)
         #Button(self.frame_content, text = 'write', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 2, column = 2, padx = 5, pady = 5)
         #command Listbox
-        Label(self.frame_content5, text = 'Edit Command From Here',font=self.myfontnew, bg="white", justify=LEFT).grid(row = 0, column = 0)
+        Label(self.frame_content5, text = 'Edit Command From Here',font=self.myfontnew, bg="midnightblue", justify=LEFT).grid(row = 0, column = 0)
         TextCommandBox=Text(self.frame_content5, height=5, width=30)
         TextCommandBox.grid(row=1, column=0, padx=5, pady=5)
-        self.output=Text(self.frame_content5,bg="black", fg="white", font=self.myfont, height=20, width=42)
+        self.output=Text(self.frame_content5,bg="black", fg="midnightblue", font=self.myfont, height=20, width=42)
         self.output.grid(row = 0, column = 1, padx=50, pady=5, rowspan=3)
         btnsubmit=Button(self.frame_content5, width=15, height=2, text="Get Result", command=self.mycallback)
         btnsubmit.grid(row=2, column=0)
@@ -123,101 +123,101 @@ class Feedback:
         #end
         self.C1 = Checkbutton(self.frame_content, text = "-x", \
                  onvalue = "-x", offvalue ="", height=1, \
-                 width = 7, bg="white", font=self.customFont, variable=self.var1)
+                 width = 7, bg="midnightblue", font=self.customFont, variable=self.var1)
         self.C1.grid(row = 2, column = 0, padx = 5, pady = 5)
         self.t1=Text(self.frame_content,height=1,width = 20)
         self.t1.grid(row = 2, column = 1, padx = 5, pady = 5)
-        l1=Label(self.frame_content, text = ': maximum number of packets per second (optional)',font=self.myfont, bg="white", justify=LEFT).grid(row = 2, column = 2, padx = 5, pady = 5)
+        l1=Label(self.frame_content, text = ': maximum number of packets per second (optional)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 2, column = 2, padx = 5, pady = 5)
         
         self.C2 = Checkbutton(self.frame_content, text = "-a", \
                  onvalue = "-a", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont, variable=self.var2)
+                 width = 7, bg="midnightblue", font=self.customFont, variable=self.var2)
         self.C2.grid(row = 3, column = 0, padx = 5, pady = 5)
         self.t2=Text(self.frame_content,height=1,width = 20)
         self.t2.grid(row = 3, column = 1, padx = 5, pady = 5)
-        l2=Label(self.frame_content, text = ': set Access Point MAC address (mandatory)',font=self.myfont, bg="white", justify=LEFT).grid(row = 3, column = 2, padx = 5, pady = 5)
+        l2=Label(self.frame_content, text = ': set Access Point MAC address (mandatory)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 3, column = 2, padx = 5, pady = 5)
         
         self.C3 = Checkbutton(self.frame_content, text = "-i", \
                  onvalue = "-i", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont,variable=self.var3)
+                 width = 7, bg="midnightblue", font=self.customFont,variable=self.var3)
         self.C3.grid(row = 4, column = 0, padx = 5, pady = 5)
         self.t3=Text(self.frame_content,height=1,width = 20)
         self.t3.grid(row = 4, column = 1, padx = 5, pady = 5)
-        l3=Label(self.frame_content, text = ': capture packets from this interface (optional)',font=self.myfont, bg="white", justify=LEFT).grid(row = 4, column = 2, padx = 5, pady = 5)
+        l3=Label(self.frame_content, text = ': capture packets from this interface (optional)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 4, column = 2, padx = 5, pady = 5)
         
         self.C4 = Checkbutton(self.frame_content, text = "-y", \
                  onvalue = "-y", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont, variable=self.var5)
+                 width = 7, bg="midnightblue", font=self.customFont, variable=self.var5)
         self.C4.grid(row = 5, column = 0, padx = 5, pady = 5)
         self.t4=Text(self.frame_content,height=1,width = 20)
         self.t4.grid(row = 5, column = 1, padx = 5, pady = 5)
-        l4=Label(self.frame_content, text = ': read PRGA from this file (optional / one of -y or -w must be defined)',font=self.myfont, bg="white", justify=LEFT).grid(row = 5, column = 2, padx = 5, pady = 5)
+        l4=Label(self.frame_content, text = ': read PRGA from this file (optional / one of -y or -w must be defined)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 5, column = 2, padx = 5, pady = 5)
         
         self.C5 = Checkbutton(self.frame_content, text = "-W", \
                  onvalue = "-W", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont,variable=self.var6)
+                 width = 7, bg="midnightblue", font=self.customFont,variable=self.var6)
         self.C5.grid(row = 6, column = 0, padx = 5, pady = 5)
         self.t5=Text(self.frame_content,height=1,width = 20)
         self.t5.grid(row = 6, column = 1, padx = 5, pady = 5)
-        l5=Label(self.frame_content, text = ': use this WEP-KEY to encrypt packets (optional / one of -y or -w must be defined)',font=self.myfont, bg="white", justify=LEFT).grid(row = 6, column = 2, padx = 5, pady = 5)
+        l5=Label(self.frame_content, text = ': use this WEP-KEY to encrypt packets (optional / one of -y or -w must be defined)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 6, column = 2, padx = 5, pady = 5)
         
         self.C6 = Checkbutton(self.frame_content, text = "-t", \
                  onvalue = "-t", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont,variable=self.var7)
+                 width = 7, bg="midnightblue", font=self.customFont,variable=self.var7)
         self.C6.grid(row = 8, column = 0, padx = 5, pady = 5)
         self.t6=Text(self.frame_content,height=1,width = 20)
         self.t6.grid(row = 8, column = 1, padx = 5, pady = 5)
-        l6=Label(self.frame_content, text = ': send frames to AP (1) or to client (0) (optional / defaults to 0)',font=self.myfont, bg="white", justify=LEFT).grid(row = 8, column = 2, padx = 5, pady = 5)
+        l6=Label(self.frame_content, text = ': send frames to AP (1) or to client (0) (optional / defaults to 0)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 8, column = 2, padx = 5, pady = 5)
         
         self.C7 = Checkbutton(self.frame_content, text = "-r", \
                  onvalue = "-r", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont,variable=self.var8)
+                 width = 7, bg="midnightblue", font=self.customFont,variable=self.var8)
         self.C7.grid(row = 9, column = 0, padx = 5, pady = 5)
         self.t7=Text(self.frame_content,height=1,width = 20)
         self.t7.grid(row = 9, column = 1, padx = 5, pady = 5)
-        l7=Label(self.frame_content, text = ': read frames out of pcap file (optional)',font=self.myfont, bg="white", justify=LEFT).grid(row = 9, column = 2, padx = 5, pady = 5)
+        l7=Label(self.frame_content, text = ': read frames out of pcap file (optional)',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 9, column = 2, padx = 5, pady = 5)
         
         self.C8 = Checkbutton(self.frame_content, text = "-h", \
                  onvalue = "-h", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont,variable=self.var9)
+                 width = 7, bg="midnightblue", font=self.customFont,variable=self.var9)
         self.C8.grid(row = 10, column = 0, padx = 5, pady = 5)
         self.t8=Text(self.frame_content,height=1,width = 20)
         self.t8.grid(row = 10, column = 1, padx = 5, pady = 5)
-        l8=Label(self.frame_content, text = ': source MAC address',font=self.myfont, bg="white", justify=LEFT).grid(row = 10, column = 2, padx = 5, pady = 5)
+        l8=Label(self.frame_content, text = ': source MAC address',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 10, column = 2, padx = 5, pady = 5)
         
         self.C9 = Checkbutton(self.frame_content, text = "-H", \
                  onvalue = "-H", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont,variable=self.var10)
+                 width = 7, bg="midnightblue", font=self.customFont,variable=self.var10)
         self.C9.grid(row = 11, column = 0, padx = 5, pady = 5)
         self.t9=Text(self.frame_content,height=1,width = 20)
         self.t9.grid(row = 11, column = 1, padx = 5, pady = 5)
-        l9=Label(self.frame_content, text = ': Display help. Long form help',font=self.myfont, bg="white", justify=LEFT).grid(row = 11, column = 2, padx = 5, pady = 5)
+        l9=Label(self.frame_content, text = ': Display help. Long form help',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 11, column = 2, padx = 5, pady = 5)
         
-        Label(self.frame_content, text = 'Repeater Options :',font=self.myfontnew, bg="white").grid(row = 12, column = 1)
+        Label(self.frame_content, text = 'Repeater Options :',font=self.myfontnew, bg="midnightblue").grid(row = 12, column = 1)
         
         self.C10 = Checkbutton(self.frame_content, text = "--repeat", \
                  onvalue = "--repeat", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont, variable=self.var11)
+                 width = 7, bg="midnightblue", font=self.customFont, variable=self.var11)
         self.C10.grid(row = 13, column = 0, padx = 5, pady = 5)
         self.t10=Text(self.frame_content,height=1,width = 20)
         self.t10.grid(row = 13, column = 1, padx = 5, pady = 5)
-        l10=Label(self.frame_content, text = ': activates repeat mode. Short form -f.',font=self.myfont, bg="white", justify=LEFT).grid(row = 13, column = 2, padx = 5, pady = 5)
+        l10=Label(self.frame_content, text = ': activates repeat mode. Short form -f.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 13, column = 2, padx = 5, pady = 5)
         
         self.C11 = Checkbutton(self.frame_content, text = "--bssid", \
                  onvalue = "--bssid", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont, variable=self.var12)
+                 width = 7, bg="midnightblue", font=self.customFont, variable=self.var12)
         self.C11.grid(row = 14, column = 0, padx = 5, pady = 5)
         self.t11=Text(self.frame_content,height=1,width = 20)
         self.t11.grid(row = 14, column = 1, padx = 5, pady = 5)
-        l11=Label(self.frame_content, text = ': BSSID to repeat. Short form -d.',font=self.myfont, bg="white", justify=LEFT).grid(row = 14, column = 2, padx = 5, pady = 5)
+        l11=Label(self.frame_content, text = ': BSSID to repeat. Short form -d.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 14, column = 2, padx = 5, pady = 5)
         
         self.C12 = Checkbutton(self.frame_content, text = "--netmask", \
                  onvalue = "--netmask", offvalue = "", height=1, \
-                 width = 7, bg="white", font=self.customFont)
+                 width = 7, bg="midnightblue", font=self.customFont)
         self.C12.grid(row = 15, column = 0, padx = 5, pady = 5)
         self.t12=Text(self.frame_content,height=1,width = 20)
         self.t12.grid(row = 15, column = 1, padx = 5, pady = 5)
-        l12=Label(self.frame_content, text = ': netmask for BSSID filter. Short form -m.',font=self.myfont, bg="white", justify=LEFT).grid(row = 15, column = 2, padx = 5, pady = 5)
+        l12=Label(self.frame_content, text = ': netmask for BSSID filter. Short form -m.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 15, column = 2, padx = 5, pady = 5)
         #end
         
    

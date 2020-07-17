@@ -46,20 +46,20 @@ class Feedback:
        
         
         #header frame
-        self.frame_header = Frame(master, bg="white")
+        self.frame_header = Frame(master, bg="lightsteelblue")
         self.frame_header.pack(fill=BOTH, side=TOP, expand=True)
         self.logo = PhotoImage(file = "logoair.gif")
         Label(self.frame_header, image = self.logo).grid(row = 0, column = 0, sticky='sw', columnspan=2)
         #end
         
         #content frame
-        self.frame_content = Frame(master, bg="white")
+        self.frame_content = Frame(master, bg="lightsteelblue")
         self.frame_content.pack(fill=BOTH, side=TOP, expand=True)
        
-        Label(self.frame_content, text = 'Based on:' ,font=self.myfont, wraplength =200, bg="white").grid(row = 0, column = 0, padx = 5, sticky = 'sw')
-        Label(self.frame_content, text = 'GUI by Hitesh:', font=self.myfont, wraplength =200,padx=0, bg="white").grid(row = 0, column = 1, padx = 5, sticky = 'sw')
-        Label(self.frame_content, text = 'Aircrack-ng' ,font=self.myfont, wraplength =300, bg="white").grid(row = 1, column = 0, padx = 5, sticky = 'sw')
-        Label(self.frame_content, text = 'hitesh@hiteshchoudhary.com', font=self.myfont2, wraplength =300,padx=0, bg="white").grid(row = 1, column = 1, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'Based on:' ,font=self.myfont, wraplength =200, bg="midnightblue").grid(row = 0, column = 0, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'GUI by Hitesh:', font=self.myfont, wraplength =200,padx=0, bg="midnightblue").grid(row = 0, column = 1, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'Aircrack-ng' ,font=self.myfont, wraplength =300, bg="midnightblue").grid(row = 1, column = 0, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'hitesh@hiteshchoudhary.com', font=self.myfont2, wraplength =300,padx=0, bg="midnightblue").grid(row = 1, column = 1, padx = 5, sticky = 'sw')
         
         #Label(self.frame_content, text = 'Comments:').grid(row = 2, column = 0, padx = 5, sticky = 'sw')
 

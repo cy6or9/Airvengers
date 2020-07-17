@@ -45,20 +45,20 @@ class Feedback:
         
         
         #content frame
-        self.frame_content = Frame(master, bg="white")
+        self.frame_content = Frame(master, bg="lightsteelblue")
         self.frame_content.pack(fill=BOTH, side=TOP, expand=True)
-        Label(self.frame_content, text = 'Airmon-ng',font=self.headerfont, bg="white").grid(row = 0, column = 0)
+        Label(self.frame_content, text = 'Airmon-ng',font=self.headerfont, bg="midnightblue").grid(row = 0, column = 0)
         btndetect=Button(self.frame_content, text = 'Detect', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 1, column = 0, padx = 5, pady = 5)
         #Mycanvas=Canvas(self.frame_content, height=200, width=200, bd=2).grid(row = 1, column = 1)
         #listbox1
-        lil1=Listbox(self.frame_content,bg="black", fg="white", font=self.myfont)
+        lil1=Listbox(self.frame_content,bg="black", fg="midnightblue", font=self.myfont)
         lil1.grid(row = 1, column = 1)
         #end
         #listbox2
-        lil2=Listbox(self.frame_content,bg="black", fg="white", font=self.myfont)
+        lil2=Listbox(self.frame_content,bg="black", fg="midnightblue", font=self.myfont)
         lil2.grid(row = 3, column = 1)
         #end
-        Label(self.frame_content, text = 'Kill these processes',font=self.myfont, bg="white").grid(row = 2, column = 1)
+        Label(self.frame_content, text = 'Kill these processes',font=self.myfont, bg="midnightblue").grid(row = 2, column = 1)
         Button(self.frame_content, text = 'Check', command =self.canvas_detect_check, height=2, width=15, font=self.customFont).grid(row = 3, column = 0, padx = 5, pady = 5)
         #canvas2=Canvas(self.frame_content, height=200, width=200, bd=2).grid(row = 3, column = 1)
         Button(self.frame_content, text = 'Kill', height=2, width=15, font=self.customFont, command=self.killprocess).grid(row = 4, column = 0, padx = 1, pady = 1)
@@ -67,10 +67,10 @@ class Feedback:
         btnstart=Button(self.frame_content, text = 'Start', command=self.item_selStart, height=2, width=15, font=self.customFont).grid(row = 5, column = 0, padx = 1, pady = 5)
         #btnstart.bind('<ListboxSelect>', self.OnDouble)
         Button(self.frame_content, text = 'Stop', height=2, width=15, font=self.customFont, command=self.item_selStop).grid(row = 5, column = 1, padx = 1, pady = 5)
-        Label(self.frame_content, text = 'www.hiteshchoudhary.com',font=self.myfont, bg="white").grid(row = 6, column = 0, columnspan=2)
-        self.lilnew1=Listbox(self.frame_content,bg="black", fg="white", font=self.myfont, selectmode=SINGLE)
+        Label(self.frame_content, text = 'www.hiteshchoudhary.com',font=self.myfont, bg="midnightblue").grid(row = 6, column = 0, columnspan=2)
+        self.lilnew1=Listbox(self.frame_content,bg="black", fg="midnightblue", font=self.myfont, selectmode=SINGLE)
         self.lilnew1.grid(row = 1, column = 1)
-        self.lilnew2=Text(self.frame_content,bg="black", fg="white", font=self.myfont, width=20, height=12)
+        self.lilnew2=Text(self.frame_content,bg="black", fg="midnightblue", font=self.myfont, width=20, height=12)
         self.lilnew2.grid(row = 3, column = 1)
         #End
    
