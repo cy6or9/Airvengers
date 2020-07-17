@@ -77,61 +77,61 @@ class Feedback:
         nb.add(self.frame_content5, text="output")
         #End
 	#frame content 7
-	Label(self.frame_content7, text = 'Aigraph-ng',font=self.headerfont, bg="midnightblue", padx=10, pady=10).grid(row = 0, column = 0)
-        btndetect=Button(self.frame_content7, text = 'Detect', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 1, column = 0, padx = 5, pady = 5)
+	Label(self.frame_content7, text = 'Airgraph-ng',font=self.headerfont, bg="midnightblue", fg="firebrick", padx=10, pady=10).grid(row = 0, column = 0)
+        btndetect=Button(self.frame_content7, text = 'Detect', fg="cornflowerblue", command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 1, column = 0, padx = 5, pady = 5)
 		
-	btndbrowse=Button(self.frame_content7, text = 'Attach File', command =self.browse_file, height=2, width=15, font=self.customFont).grid(row = 3, column = 0, padx = 5, pady = 5)	
+	btndbrowse=Button(self.frame_content7, text = 'Attach File', fg="cornflowerblue", command =self.browse_file, height=2, width=15, font=self.customFont).grid(row = 3, column = 0, padx = 5, pady = 5)	
 	self.lilnew1=Listbox(self.frame_content7,bg="black", fg="firebrick", font=self.myfont, selectmode=SINGLE, width=30, height=15)
         self.lilnew1.grid(row = 1, column = 1, rowspan=3)
 	#End        
 
-        Label(self.frame_content, text = 'Airserv-ng',font=self.headerfont, bg="midnightblue", padx=10, pady=10).grid(row = 0, column = 0)
-        Label(self.frame_content, text = 'Options :',font=self.myfontnew, bg="midnightblue").grid(row = 1, column = 1)
+        Label(self.frame_content, text = 'Airserv-ng',font=self.headerfont, bg="midnightblue", fg="firebrick", padx=10, pady=10).grid(row = 0, column = 0)
+        Label(self.frame_content, text = 'Options :',font=self.myfontnew, bg="midnightblue", fg="deepskyblue").grid(row = 1, column = 1)
         #Button(self.frame_content, text = 'ivs', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 2, column = 0, padx = 5, pady = 5)
         #Button(self.frame_content, text = 'gpsd', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 2, column = 1, padx = 5, pady = 5)
         #Button(self.frame_content, text = 'write', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 2, column = 2, padx = 5, pady = 5)
         #command Listbox
-        Label(self.frame_content5, text = 'Edit Command From Here',font=self.myfontnew, bg="midnightblue", justify=LEFT).grid(row = 0, column = 0)
+        Label(self.frame_content5, text = 'Edit Command From Here',font=self.myfontnew, bg="midnightblue", fg="deepskyblue", justify=LEFT).grid(row = 0, column = 0)
         TextCommandBox=Text(self.frame_content5, height=5, width=30)
         TextCommandBox.grid(row=1, column=0, padx=5, pady=5)
         self.output=Text(self.frame_content5,bg="black", fg="firebrick", font=self.myfont, height=15, width=30)
         self.output.grid(row = 0, column = 1, padx=50, pady=5, rowspan=3)
-        btnsubmit=Button(self.frame_content5, width=15, height=2, text="Get Result", command=self.mycallback)
+        btnsubmit=Button(self.frame_content5, width=15, height=2, text="Get Result", fg="cornflowerblue", command=self.mycallback)
         btnsubmit.grid(row=2, column=0)
-        btnclear=Button(self.frame_content5, width=15, height=2, text="Clear Output", command=self.clearoutput)
+        btnclear=Button(self.frame_content5, width=15, height=2, text="Clear Output", fg="cornflowerblue", command=self.clearoutput)
         btnclear.grid(row=3, column=0)
         #end
-        self.C1 = Checkbutton(self.frame_content, text = "-p", \
+        self.C1 = Checkbutton(self.frame_content, text = "-p", fg="deepskyblue", \
                  onvalue="-p",offvalue="", height=1, \
                  width = 7, bg="midnightblue", font=self.customFont, variable=self.var1)
         self.C1.grid(row = 2, column = 0, padx = 5, pady = 5)
         self.t1=Text(self.frame_content,height=1,width = 20)
         self.t1.grid(row = 2, column = 1, padx = 5, pady = 5)
-        l1=Label(self.frame_content, text = ': TCP port to listen on. Defaults to 666.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 2, column = 2, padx = 5, pady = 5)
+        l1=Label(self.frame_content, text = ': TCP port to listen on. Defaults to 666.',font=self.myfont, bg="midnightblue", fg="deepskyblue", justify=LEFT).grid(row = 2, column = 2, padx = 5, pady = 5)
         
-        self.C2 = Checkbutton(self.frame_content, text = "-d", \
+        self.C2 = Checkbutton(self.frame_content, text = "-d", fg="deepskyblue", \
                  onvalue = "-d", offvalue = "", height=1, \
                  width = 7, bg="midnightblue", font=self.customFont,variable=self.var2)
         self.C2.grid(row = 3, column = 0, padx = 5, pady = 5)
         self.t2=Text(self.frame_content,height=1,width = 20)
         self.t2.grid(row = 3, column = 1, padx = 5, pady = 5)
-        l2=Label(self.frame_content, text = ': wifi device to serve.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 3, column = 2, padx = 5, pady = 5)
+        l2=Label(self.frame_content, text = ': wifi device to serve.',font=self.myfont, bg="midnightblue", fg="deepskyblue", justify=LEFT).grid(row = 3, column = 2, padx = 5, pady = 5)
         
-        self.C3 = Checkbutton(self.frame_content, text = "-c", \
+        self.C3 = Checkbutton(self.frame_content, text = "-c", fg="deepskyblue", \
                  onvalue = "-c", offvalue ="", height=1, \
                  width = 7, bg="midnightblue", font=self.customFont,variable=self.var3)
         self.C3.grid(row = 4, column = 0, padx = 5, pady = 5)
         self.t3=Text(self.frame_content,height=1,width = 20)
         self.t3.grid(row = 4, column = 1, padx = 5, pady = 5)
-        l3=Label(self.frame_content, text = ':   Channel to start on.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 4, column = 2, padx = 5, pady = 5)
+        l3=Label(self.frame_content, text = ':   Channel to start on.',font=self.myfont, bg="midnightblue", fg="deepskyblue", justify=LEFT).grid(row = 4, column = 2, padx = 5, pady = 5)
         
-        self.C4 = Checkbutton(self.frame_content, text = "-v", \
+        self.C4 = Checkbutton(self.frame_content, text = "-v", fg="deepskyblue", \
                  onvalue = "-v", offvalue = "", height=1, \
                  width = 7, bg="midnightblue", font=self.customFont,variable=self.var4)
         self.C4.grid(row = 5, column = 0, padx = 5, pady = 5)
         self.t4=Text(self.frame_content,height=1,width = 20)
         self.t4.grid(row = 5, column = 1, padx = 5, pady = 5)
-        l4=Label(self.frame_content, text = ': debug level.',font=self.myfont, bg="midnightblue", justify=LEFT).grid(row = 5, column = 2, padx = 5, pady = 5)
+        l4=Label(self.frame_content, text = ': debug level.',font=self.myfont, bg="midnightblue", fg="deepskyblue", justify=LEFT).grid(row = 5, column = 2, padx = 5, pady = 5)
     
             
       

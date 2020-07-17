@@ -56,10 +56,10 @@ class Feedback:
         self.frame_content = Frame(master, bg="lightsteelblue")
         self.frame_content.pack(fill=BOTH, side=TOP, expand=True)
        
-        Label(self.frame_content, text = 'Based on:' ,font=self.myfont, wraplength =200, bg="midnightblue").grid(row = 0, column = 0, padx = 5, sticky = 'sw')
-        Label(self.frame_content, text = 'GUI by Hitesh:', font=self.myfont, wraplength =200,padx=0, bg="midnightblue").grid(row = 0, column = 1, padx = 5, sticky = 'sw')
-        Label(self.frame_content, text = 'Aircrack-ng' ,font=self.myfont, wraplength =300, bg="midnightblue").grid(row = 1, column = 0, padx = 5, sticky = 'sw')
-        Label(self.frame_content, text = 'hitesh@hiteshchoudhary.com', font=self.myfont2, wraplength =300,padx=0, bg="midnightblue").grid(row = 1, column = 1, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'Based on:' ,font=self.myfont, wraplength =200, bg="midnightblue", fg="firebrick").grid(row = 0, column = 0, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'GUI by Hitesh:', font=self.myfont, wraplength =200,padx=0, bg="midnightblue", fg="firebrick").grid(row = 0, column = 1, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'Aircrack-ng' ,font=self.myfont, wraplength =300, bg="midnightblue", fg="firebrick").grid(row = 1, column = 0, padx = 5, sticky = 'sw')
+        Label(self.frame_content, text = 'hitesh@hiteshchoudhary.com', font=self.myfont2, wraplength =300,padx=0, bg="midnightblue", fg="firebrick").grid(row = 1, column = 1, padx = 5, sticky = 'sw')
         
         #Label(self.frame_content, text = 'Comments:').grid(row = 2, column = 0, padx = 5, sticky = 'sw')
 
@@ -73,18 +73,18 @@ class Feedback:
         
         
 
-        Button(self.frame_content, text = 'airmon-ng', command =AirmonNg, height=2, width=15, font=self.customFont).grid(row = 4, column = 0, padx = 5, pady = 5)
-        Button(self.frame_content, text = 'aircrack-ng', command=AircrackNg,  height=2, width=15, font=self.customFont).grid(row = 4, column = 1, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airdecap-ng' , command = AirdecapNg,  height=2, width=15, font=self.customFont).grid(row = 5, column = 0, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airdecloak-ng', command = AirdecloakNg,  height=2, width=15, font=self.customFont).grid(row = 5, column = 1, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airdrop-ng', command = AirdropNg,  height=2, width=15, font=self.customFont).grid(row = 6, column = 0, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'aireplay-ng', command = AireplayNg,  height=2, width=15, font=self.customFont).grid(row = 6, column = 1, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airgraph-ng', command = AirgraphNg,  height=2, width=15, font=self.customFont).grid(row = 7, column = 0, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airbase-ng', command = AirbaseNg,  height=2, width=15, font=self.customFont).grid(row = 7, column = 1, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airodump-ng', command = AirodumpNg,  height=2, width=15, font=self.customFont).grid(row = 8, column = 0, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airolib-ng', command = AirolibNg,  height=2, width=15, font=self.customFont).grid(row = 8, column = 1, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airserv-ng ', command = AirservNg,  height=2, width=15, font=self.customFont).grid(row = 9, column = 0, padx = 5, pady = 5 )
-        Button(self.frame_content, text = 'airtun-ng ', command = AirtunNg,  height=2, width=15, font=self.customFont).grid(row = 9, column = 1, padx = 5, pady = 5)
+        Button(self.frame_content, text = 'airmon-ng', command =AirmonNg, fg="cornflowerblue", height=2, width=15, font=self.customFont).grid(row = 4, column = 0, padx = 5, pady = 5)
+        Button(self.frame_content, text = 'aircrack-ng', command=AircrackNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 4, column = 1, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airdecap-ng' , command = AirdecapNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 5, column = 0, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airdecloak-ng', command = AirdecloakNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 5, column = 1, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airdrop-ng', command = AirdropNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 6, column = 0, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'aireplay-ng', command = AireplayNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 6, column = 1, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airgraph-ng', command = AirgraphNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 7, column = 0, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airbase-ng', command = AirbaseNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 7, column = 1, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airodump-ng', command = AirodumpNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 8, column = 0, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airolib-ng', command = AirolibNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 8, column = 1, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airserv-ng ', command = AirservNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 9, column = 0, padx = 5, pady = 5 )
+        Button(self.frame_content, text = 'airtun-ng ', command = AirtunNg, fg="cornflowerblue",  height=2, width=15, font=self.customFont).grid(row = 9, column = 1, padx = 5, pady = 5)
         
                             
     def clear(self):
@@ -135,7 +135,7 @@ def AireplayNg():
     
 def AirgraphNg():
     
-    subprocess.call(["python","Aigraph-ng.py"]) 
+    subprocess.call(["python","Airgraph-ng.py"]) 
     
 def AirolibNg():
     
