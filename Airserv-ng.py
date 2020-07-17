@@ -81,7 +81,7 @@ class Feedback:
         btndetect=Button(self.frame_content7, text = 'Detect', command =self.canvas_detect, height=2, width=15, font=self.customFont).grid(row = 1, column = 0, padx = 5, pady = 5)
 		
 	btndbrowse=Button(self.frame_content7, text = 'Attach File', command =self.browse_file, height=2, width=15, font=self.customFont).grid(row = 3, column = 0, padx = 5, pady = 5)	
-	self.lilnew1=Listbox(self.frame_content7,bg="black", fg="midnightblue", font=self.myfont, selectmode=SINGLE, width=30, height=15)
+	self.lilnew1=Listbox(self.frame_content7,bg="black", fg="firebrick", font=self.myfont, selectmode=SINGLE, width=30, height=15)
         self.lilnew1.grid(row = 1, column = 1, rowspan=3)
 	#End        
 
@@ -94,7 +94,7 @@ class Feedback:
         Label(self.frame_content5, text = 'Edit Command From Here',font=self.myfontnew, bg="midnightblue", justify=LEFT).grid(row = 0, column = 0)
         TextCommandBox=Text(self.frame_content5, height=5, width=30)
         TextCommandBox.grid(row=1, column=0, padx=5, pady=5)
-        self.output=Text(self.frame_content5,bg="black", fg="midnightblue", font=self.myfont, height=15, width=30)
+        self.output=Text(self.frame_content5,bg="black", fg="firebrick", font=self.myfont, height=15, width=30)
         self.output.grid(row = 0, column = 1, padx=50, pady=5, rowspan=3)
         btnsubmit=Button(self.frame_content5, width=15, height=2, text="Get Result", command=self.mycallback)
         btnsubmit.grid(row=2, column=0)
